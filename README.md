@@ -111,7 +111,11 @@ Key API discoveries:
 ## About
 
 **Tester:** Kirill Kovalevski
+
 **Mentor:** Gal Matalon
+
 **Institution:** המכללה לאוטומציה
+
 **Duration:** April — June 2026
+
 **Environment:** Production (iPhone 14 Pro, iOS 26.3.1, 4G)
