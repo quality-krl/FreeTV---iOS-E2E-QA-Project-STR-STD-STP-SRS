@@ -150,6 +150,20 @@ End-to-end manual QA project for the **FreeTV iOS streaming application**, cover
 
 ---
 
+## 🗂️ Sample Defect Documentation
+
+Each defect was logged in JIRA with severity, priority, related requirement, environment, reproduction steps, expected vs. actual results, and annotated screenshot/video evidence.
+
+**FTV-5 · High Severity** — OTP remains valid far beyond the industry standard (release blocker):
+
+![FTV-5 JIRA Bug Report](assets/screenshots/freetv_jira_ftv5.png)
+
+**FTV-4 · Low Severity** — with annotated on-device screenshot evidence:
+
+![FTV-4 JIRA Bug Report](assets/screenshots/freetv_jira_ftv4.png)
+
+---
+
 ## 📊 Test Execution Results
 
 ![Overall Test Results](assets/screenshots/freetv_results_summary.png)
