@@ -34,6 +34,7 @@ following IEEE 830 and IEEE 829 standards.
 | API | 18 | 16 | 2 | 0 | 89% |
 | Database | 14 | 0 | 0 | 14 | N/A |
 | **TOTAL** | **123** | **99** | **9** | **15** | **80%** |
+(excluding Blocked Database cases: 99/109 = **91% Pass Rate**
 
 ---
 
@@ -97,7 +98,7 @@ Key API discoveries:
 
 | Document | Standard | Description |
 |----------|----------|-------------|
-| SRS | IEEE 830 | 36 Functional + 20 Non-Functional requirements |
+| SRS | IEEE 830 | 36 Functional + 19 Non-Functional requirements |
 | STP | IEEE 829 | Test planning and strategy |
 | STD | IEEE 829 | 123 test cases with steps and evidence |
 | STR | IEEE 829 | Full test results, RTM, defect summary |
