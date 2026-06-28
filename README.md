@@ -2,31 +2,75 @@
 
 ### SRS · STP · STD · STR · API Testing · Security Disclosure
 
-![Status](https://img.shields.io/badge/Status-Completed-7FFF00?style=flat-square) ![Test Cases](https://img.shields.io/badge/Test%20Cases-123-blue?style=flat-square) ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-80%25-7FFF00?style=flat-square) ![Bugs](https://img.shields.io/badge/Defects-9-red?style=flat-square) ![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Completed-9EE817?style=flat-square) ![Test Cases](https://img.shields.io/badge/Test%20Cases-123-blue?style=flat-square) ![Pass Rate](https://img.shields.io/badge/Pass%20Rate-80%25-9EE817?style=flat-square) ![Bugs](https://img.shields.io/badge/Defects-9-red?style=flat-square) ![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey?style=flat-square)
+
+End-to-end manual QA project for the **FreeTV iOS streaming application**, covering the full QA lifecycle — requirements, test planning, design, execution, defect reporting, and final reporting — following IEEE 830 and IEEE 829 standards.
 
 ---
 
-## Project Overview
+## 📋 Project Overview
 
-Full-cycle manual QA portfolio project for the **FreeTV iOS streaming application** (v1.25.32, build 142) executed on iPhone 14 Pro running iOS 26.3.1.
-
-The project covers the complete QA lifecycle from requirements analysis through test planning, execution, defect reporting, and final test reporting — following IEEE 830 and IEEE 829 standards.
-
----
-
-## Test Coverage
-
-| Suite          | Total   | Passed | Failed | Blocked | Pass Rate |
-| -------------- | ------- | ------ | ------ | ------- | --------- |
-| Functional     | 71      | 67     | 4      | 0       | 94%       |
-| Non-Functional | 19      | 16     | 3      | 1       | 80%       |
-| API            | 18      | 16     | 2      | 0       | 89%       |
-| Database       | 14      | 0      | 0      | 14      | N/A       |
-| **TOTAL**      | **123** | **99** | **9**  | **15**  | **80%**   |
+| Field                 | Details                                  |
+| --------------------- | ---------------------------------------- |
+| **System Under Test** | FreeTV iOS App — v1.25.32 (build 142)    |
+| **Test Type**         | Manual Functional, Non-Functional, API, Database |
+| **Environment**       | Production                               |
+| **Device**            | iPhone 14 Pro · iOS 26.3.1 · 4G          |
+| **Standards**         | IEEE 830 (SRS) · IEEE 829 (STP/STD/STR)  |
+| **Prepared by**       | Kirill Kovalevski                        |
+| **Mentor**            | Gal Matalon                              |
 
 ---
 
-## Key Findings
+## 📥 Full Documentation
+
+📄 **[Download the full documentation (PDF)](FreeTV_QA_Documentation%20-%20Kirill%20Kovalevski.pdf)** — SRS, STP, STD, STR in a single 99-page file.
+
+| Document | Standard | Description                                    |
+| -------- | -------- | ---------------------------------------------- |
+| SRS      | IEEE 830 | 36 Functional + 19 Non-Functional requirements |
+| STP      | IEEE 829 | Test planning and strategy                     |
+| STD      | IEEE 829 | 123 test cases with steps and evidence         |
+| STR      | IEEE 829 | Full test results, RTM, defect summary         |
+
+---
+
+## 📊 Execution Summary
+
+| Status     | Count |
+| ---------- | ----- |
+| ✅ Passed   | 99    |
+| ❌ Failed   | 9     |
+| ⏸️ Blocked  | 15    |
+| ⏭️ Skipped  | 0     |
+| 📋 Total   | 123   |
+
+**Pass Rate: 80%** (91% excluding blocked database cases)
+
+---
+
+## 🧪 Results by Suite
+
+| Suite          | Total | Passed | Failed | Blocked | Pass Rate |
+| -------------- | ----- | ------ | ------ | ------- | --------- |
+| Functional     | 71    | 67     | 4      | 0       | 94%       |
+| Non-Functional | 19    | 16     | 3      | 1       | 80%       |
+| API            | 18    | 16     | 2      | 0       | 89%       |
+| Database       | 14    | 0      | 0      | 14      | N/A       |
+| **Total**      | **123** | **99** | **9** | **15** | **80%**  |
+
+> Database cases were defined to demonstrate data-integrity validation but blocked from execution due to production-environment constraints (no direct DB access).
+
+---
+
+## 🐛 Defect Summary
+
+| Severity      | Count |
+| ------------- | ----- |
+| 🔴 S2 · High   | 2     |
+| 🟠 S3 · Medium | 2     |
+| 🟢 S4 · Low    | 5     |
+| **Total**     | **9** |
 
 ### 🔴 High Severity
 
@@ -56,23 +100,33 @@ The project covers the complete QA lifecycle from requirements analysis through 
 
 ---
 
-## API Testing
+## 🔍 Testing Areas
 
-Dual-method API testing approach using:
-
-- **Fiddler** — Primary traffic capture and observation
-- **Postman** — Secondary request replay and validation
-
-Key API discoveries:
-
-- OTP validation endpoint uses **PUT** method (not POST as originally designed)
-- **4 simultaneous search requests** fire on each keystroke (search-as-you-type)
-- Content endpoints return **200 OK without authentication** — security vulnerability
-- Watchlist endpoint correctly enforces **device-level authentication**
+- Onboarding & Authentication
+- Live TV Streaming
+- VOD & Catch-Up Content
+- Search & Search History
+- Watchlist Management
+- Profile Management (multi-profile)
+- Navigation
+- API Endpoints (auth, content, search, watchlist)
+- Database-related Validation
+- Performance, Security, Compatibility, Localization, Recovery
 
 ---
 
-## Tools & Technologies
+## 🛠️ QA Methodologies
+
+- Positive / Negative Testing
+- Boundary Value Analysis (BVA)
+- Equivalence Partitioning
+- Exploratory Testing
+- Edge Case Testing
+- Risk-based Testing
+
+---
+
+## 🧰 Tools Used
 
 | Tool          | Purpose                                          |
 | ------------- | ------------------------------------------------ |
@@ -80,32 +134,36 @@ Key API discoveries:
 | JIRA          | Bug tracking — 9 defects filed                   |
 | Fiddler       | API traffic capture and analysis                 |
 | Postman       | API request replay and validation                |
-| iPhone 14 Pro | Primary test device                              |
-| iOS 26.3.1    | Test environment                                 |
+
+### Key API Discoveries
+
+- OTP validation endpoint uses **PUT** method (not POST as originally assumed)
+- **4 simultaneous search requests** fire on each keystroke (search-as-you-type)
+- Content endpoints return **200 OK without authentication** — security vulnerability
+- Watchlist endpoint correctly enforces **device-level authentication**
 
 ---
 
-## Documentation
+## 🚦 Release Recommendation
 
-📄 **[Download the full documentation (PDF)](FreeTV_QA_Documentation%20-%20Kirill%20Kovalevski.pdf)** — SRS, STP, STD, STR in a single 99-page file.
-
-| Document | Standard | Description                                    |
-| -------- | -------- | ---------------------------------------------- |
-| SRS      | IEEE 830 | 36 Functional + 19 Non-Functional requirements |
-| STP      | IEEE 829 | Test planning and strategy                     |
-| STD      | IEEE 829 | 123 test cases with steps and evidence         |
-| STR      | IEEE 829 | Full test results, RTM, defect summary         |
+> **NOT RECOMMENDED FOR RELEASE** in the current state. Two High-severity defects must be resolved and retested first: FTV-5 (OTP validity period) and FTV-8 (unauthenticated content access).
 
 ---
 
-## About
+## 📊 Test Execution Results
 
-**Tester:** Kirill Kovalevski
+![Overall Test Results](assets/screenshots/freetv_results_summary.png)
 
-**Mentor:** Gal Matalon
+![Results by Suite](assets/screenshots/freetv_results_by_suite.png)
 
-**Institution:** המכללה לאוטומציה
+![Defect Summary by Severity](assets/screenshots/freetv_defects.png)
 
-**Duration:** April — June 2026
+![Requirements Coverage](assets/screenshots/freetv_coverage.png)
 
-**Environment:** Production (iPhone 14 Pro, iOS 26.3.1, 4G)
+---
+
+## 👤 Author
+
+**Kirill Kovalevski** — QA Engineer
+
+**Mentor:** Gal Matalon · **Institution:** המכללה לאוטומציה · **Duration:** April — June 2026
