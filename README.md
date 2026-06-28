@@ -30,7 +30,7 @@ following IEEE 830 and IEEE 829 standards.
 | Suite | Total | Passed | Failed | Blocked | Pass Rate |
 |-------|-------|--------|--------|---------|-----------|
 | Functional | 71 | 67 | 4 | 0 | 94% |
-| Non-Functional | 20 | 16 | 3 | 1 | 80% |
+| Non-Functional | 19 | 16 | 3 | 1 | 80% |
 | API | 18 | 16 | 2 | 0 | 89% |
 | Database | 14 | 0 | 0 | 14 | N/A |
 | **TOTAL** | **123** | **99** | **9** | **15** | **80%** |
@@ -43,12 +43,12 @@ following IEEE 830 and IEEE 829 standards.
 | ID | Title | Requirement |
 |----|-------|-------------|
 | FTV-5 | OTP remains valid for 60 minutes — industry standard is 10 minutes | FR-007, NFR-011 |
-| FTV-8 | Multiple content endpoints accessible without authentication | NFR-012, FR-013 |
+| FTV-8 | Multiple content endpoints accessible without authentication | NFR-010, FR-013 |
 
 ### 🟠 Medium Severity
 | ID | Title | Requirement |
 |----|-------|-------------|
-| FTV-7 | Internal system architecture exposed in API error responses | NFR-012 |
+| FTV-7 | Internal system architecture exposed in API error responses | NFR-010 |
 | FTV-9 | Playback position not restored after app force-close | NFR-020 |
 
 ### 🟢 Low Severity
