@@ -6,6 +6,9 @@
 
 End-to-end manual QA project for the **FreeTV iOS streaming application**, covering the full QA lifecycle — requirements, test planning, design, execution, defect reporting, and final reporting — following IEEE 830 and IEEE 829 standards.
 
+
+![FreeTV QA Project Cover](assets/screenshots/freetv_cover.png)
+
 ---
 
 ## 📋 Project Overview
@@ -147,6 +150,8 @@ End-to-end manual QA project for the **FreeTV iOS streaming application**, cover
 ## 🚦 Release Recommendation
 
 > **NOT RECOMMENDED FOR RELEASE** in the current state. Two High-severity defects must be resolved and retested first: FTV-5 (OTP validity period) and FTV-8 (unauthenticated content access).
+
+![Risk Assessment](assets/screenshots/freetv_risk_assessment.png)
 
 ---
 
